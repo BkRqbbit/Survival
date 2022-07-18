@@ -8,6 +8,7 @@ int main(){
     sf::VideoMode windowSize( width, height );
     std::string windowTitle = "Survival - The End Of Our Times";
     sf::RenderWindow window( windowSize, windowTitle , sf::Style::Titlebar | sf::Style::Close);
+    window.setFramerateLimit(60);
     window.setPosition(sf::Vector2i( width/4, height/4 ));
 
     while( window.isOpen() ){
