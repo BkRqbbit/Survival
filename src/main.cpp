@@ -3,9 +3,12 @@
 #include<SFML/Graphics.hpp>
 
 int main(){
-    sf::VideoMode windowDimensions(1280, 720);
+    int width = 1280;
+    int height = 720;
+    sf::VideoMode windowSize( width, height );
     std::string windowTitle = "Survival - The End Of Our Times";
-    sf::RenderWindow window( windowDimensions, windowTitle , sf::Style::Titlebar | sf::Style::Close);
+    sf::RenderWindow window( windowSize, windowTitle , sf::Style::Titlebar | sf::Style::Close);
+    window.setPosition(sf::Vector2i( width/4, height/4 ));
 
     while( window.isOpen() ){
         sf::Event event;
