@@ -8,5 +8,5 @@ fi
 # Compile the project files
 echo "Compiling files..."
 g++ -c src/main.cpp -o obj/main.o
-g++ obj/main.o -o Survival -lsfml-system -lsfml-window -lsfml-graphics
+g++ obj/main.o src/Game/Game.cpp -o Survival -lsfml-system -lsfml-window -lsfml-graphics
 echo "Compilation complete!"
